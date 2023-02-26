@@ -59,7 +59,7 @@ spec:
         - name: database__client
           value: mysql
         - name: mail__from
-          value: '''C Pretzer'' <charles@chabrina.com>'
+          value: '''yall'' <yall@you.com>'
         - name: mail__options__service
           value: Mailgun
         - name: mail__options__auth__user
