@@ -1,16 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"flag"
+	log "github.com/sirupsen/logrus"
 	"os"
 )
 
 func main() {
-	message, exists := os.LookupEnv("K8S_VERSIONER_MESSAGE")
+	flag.Parse()
+	k8sResourceYaml, err := os.Open(flag.Args()[0])
 
-	if !exists {
-		message = "XO ReiRay"
+	if err != nil {
+		log.Error("frowny face\n", err)
 	}
 
-	fmt.Fprintln(os.Stderr, fmt.Sprintf("Your message is %s", message))
+	log.Infof("Ya did great \n %v", k8sResourceYaml)
 }
