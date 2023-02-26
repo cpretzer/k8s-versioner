@@ -43,7 +43,7 @@ spec:
         - name: database__connection__database
           value: ghost
         - name: database__connection__host
-          value: 34.82.81.31
+          value: ""
         - name: database__connection__password
           valueFrom:
             secretKeyRef:
