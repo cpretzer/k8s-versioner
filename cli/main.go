@@ -8,11 +8,11 @@ import (
 
 func main() {
 	flag.Parse()
-	k8sResourceYaml, err := os.Open(flag.Args()[0])
+	k8sResourceYaml, err := os.ReadFile(flag.Args()[0])
 
 	if err != nil {
 		log.Error("frowny face\n", err)
 	}
 
-	log.Infof("Ya did great \n %v", k8sResourceYaml)
+	log.Infof("Ya did great \n %s", k8sResourceYaml)
 }
